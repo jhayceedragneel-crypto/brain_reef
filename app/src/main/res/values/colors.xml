@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Underwater Theme Palette -->
+    <color name="deep_sea_blue">#001B44</color>
+    <color name="ocean_blue">#004E7C</color>
+    <color name="turquoise">#00A8CC</color>
+    <color name="seafoam">#A6E3E9</color>
+    <color name="coral_pink">#FF7E67</color>
+    <color name="bubble_blue">#E3FDFD</color>
+    <color name="sandy_yellow">#F8E9A1</color>
+    <color name="kelp_green">#2D5A27</color>
+
+    <!-- Functional aliases -->
+    <color name="bg_dark">@color/deep_sea_blue</color>
+    <color name="primary_teal">@color/turquoise</color>
+    <color name="secondary_teal">@color/ocean_blue</color>
+    <color name="accent_yellow">@color/sandy_yellow</color>
+    <color name="card_bg">#26FFFFFF</color> <!-- Glassmorphism: semi-transparent white -->
+    <color name="sidebar_bg">#4D00A8CC</color> <!-- Transparent turquoise -->
+    <color name="button_quest">@color/coral_pink</color>
+</resources>

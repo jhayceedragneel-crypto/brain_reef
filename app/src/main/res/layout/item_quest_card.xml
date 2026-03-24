@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="12dp">
+
+    <ImageView
+        android:id="@+id/quest_icon"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="@string/quest_icon_desc" />
+
+    <TextView
+        android:id="@+id/quest_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/default_quest_title"
+        android:textColor="@color/accent_yellow"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/underwater_bg">
+
+    <!-- Animated Bubbles -->
+    <View
+        android:id="@+id/bubble1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bubble_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        android:layout_marginStart="50dp" />
+
+    <View
+        android:id="@+id/bubble2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/bubble_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="80dp" />
+
+    <!-- Animated Fish -->
+    <ImageView
+        android:id="@+id/fish1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_fish"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Swimming Fish" />
+
+    <!-- Sidebar -->
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sidebar_bg"
+        android:backgroundTint="@color/sidebar_bg"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Study Raid"
+            android:textColor="@color/accent_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/nav_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/seafoam"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/nav_quests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quests"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:background="@drawable/nav_bg"
+            android:backgroundTint="@color/ocean_blue"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/nav_library"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library"
+            android:textColor="@color/seafoam"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/nav_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/seafoam"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Sea Wonders!"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start_quest_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Discovery"
+        android:backgroundTint="@color/button_quest"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingHorizontal="32dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:scrollbarThumbHorizontal="@drawable/scrollbar_thumb"
+        android:scrollbarTrackHorizontal="@drawable/scrollbar_track"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="false"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_quest_main"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/quest_list_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp">
+
+            <!-- Initial topics -->
+            <LinearLayout android:layout_width="160dp" android:layout_height="wrap_content" android:background="@drawable/card_bg" android:orientation="vertical" android:padding="16dp" android:layout_margin="12dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:background="@drawable/nav_bg" android:backgroundTint="@color/bubble_blue" android:src="@android:drawable/ic_menu_gallery" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Math" android:textColor="@color/accent_yellow" android:textStyle="bold" android:textSize="20sp" android:gravity="center" android:layout_marginTop="12dp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="160dp" android:layout_height="wrap_content" android:background="@drawable/card_bg" android:orientation="vertical" android:padding="16dp" android:layout_margin="12dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:background="@drawable/nav_bg" android:backgroundTint="@color/bubble_blue" android:src="@android:drawable/ic_menu_gallery" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Science" android:textColor="@color/accent_yellow" android:textStyle="bold" android:textSize="20sp" android:gravity="center" android:layout_marginTop="12dp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="160dp" android:layout_height="wrap_content" android:background="@drawable/card_bg" android:orientation="vertical" android:padding="16dp" android:layout_margin="12dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:background="@drawable/nav_bg" android:backgroundTint="@color/bubble_blue" android:src="@android:drawable/ic_menu_gallery" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="English" android:textColor="@color/accent_yellow" android:textStyle="bold" android:textSize="20sp" android:gravity="center" android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

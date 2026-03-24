@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BrainReef</string>
+    <string name="study_raid">Study Raid</string>
+    <string name="home">Home</string>
+    <string name="quests">Quests</string>
+    <string name="library">Library</string>
+    <string name="settings">Settings</string>
+    <string name="discover_sea_wonders">Discover Sea Wonders!</string>
+    <string name="add_new_discovery">Add New Discovery</string>
+    <string name="swimming_fish">Swimming Fish</string>
+    <string name="math">Math</string>
+    <string name="science">Science</string>
+    <string name="english">English</string>
+    <string name="quest_icon_desc">Quest Icon</string>
+    <string name="default_quest_title">New Quest</string>
+</resources>
